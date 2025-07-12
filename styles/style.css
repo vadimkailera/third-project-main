@@ -1,1 +1,339 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.page {
+    font-family: var(--font-style-text), monospace;
+    line-height: var(--line-height-text);
+    background-repeat: no-repeat;
+    background-image: var(--bg-image);
+    background-color: var(--bg-color-reserve);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0 auto;
+
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    justify-items: end;
+    align-items: center;
+    padding: var(--indent);
+}
+
+.decorated-zone {
+    position: relative;
+    min-height: 668px;
+    height: 100vh;
+}
+
+.decorated-zone::after {
+    content: "";
+    inline-size: 25px;
+    block-size: 25px;
+    border-inline-end: 1px solid var(--bg-color);
+    border-block-start:1px solid var(--bg-color);
+    position: absolute;
+    inset-inline-end: 10px;
+    inset-block-start: 10px;
+}
+
+.decorated-zone::before {
+    content: "";
+    inline-size: 25px;
+    block-size: 25px;
+    border-inline-start: 1px solid var(--bg-color);
+    border-block-end: 1px solid var(--bg-color);
+    position: absolute;
+    inset-inline-start: 10px;
+    inset-block-end: 10px;
+}
+
+.decorated_title::after {
+    content: "";
+    border-radius: 50%;
+    block-size: 9px;
+    inline-size: 9px;
+    background-color: var(--bg-color);
+    position: absolute;
+    inset-inline-end: 19px;
+    inset-block-start: 18px;
+    box-shadow: 0px 0px 4px 4px var(--bg-color);
+}
+
+.decorated_title::before {
+    content: "rec";
+    text-transform: uppercase;
+    color: var(--bg-color);
+    position: absolute;
+    inset-inline-end: 38px;
+    inset-block-start: 10px;
+}
+
+.header__theme-menu-list {
+    display: grid;
+    justify-items: end;
+    gap: var(--indent);
+    list-style: none;
+}
+
+.header__theme-menu-button {
+    color: var(--bg-color);
+    background: transparent;
+    border: none;
+    font-family: var(--font-style-text);
+    font-weight: normal;
+    font-size: var(--size-text);
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.header__title {
+    color: var(--color-title);
+    font-family: var(--font-style-text);
+    font-weight: bold;
+    font-size: var(--font-size-title);
+    text-shadow: 4px 4px 0 var(--bg-color); /* --accent-color хотят чтобы я поставил*/
+    line-height: var(--line-height-title);
+    justify-self: start;
+}
+
+.header__paragraf {
+    font-family: var(--font-style-text);
+    font-weight: bold;
+    font-size: var(--size-text);
+    line-height: var(--line-height-text);
+}
+
+.title-decor {
+    background-color: var(--bg-color);
+}
+
+
+.content {
+    padding: var(--padding-block) var(--indent) var(--indent) var(--indent);
+    
+}
+
+.section__content {
+    display: grid;
+    gap: calc(var(--indent) * 2);
+    padding: 0 0 calc(var(--padding-block) + var(--indent)) 0;
+}
+
+.content__answer {
+    display: grid;
+    gap: 10px;
+}
+
+.completion .content__answer-title {
+    font-weight: normal;
+  }
+
+.section__content_questions-title {
+    font-size: var(--size-text);
+    font-family: var(--font-style-text);
+    line-height: var(--line-height-text);
+    color: var(--bg-color);
+}
+
+.content__answer-title {
+    font-size: var(--size-text);
+    font-family: var(--font-style-text);
+    line-height: var(--line-height-text);
+    font-weight: bold;
+}
+
+.content__answer-text {
+    font-size: var(--size-text);
+    font-family: var(--font-style-text);
+    line-height: var(--line-height-text);
+    color: var(--color-text-main);
+}
+
+.text__answer-akcent {
+    text-decoration: none;
+    text-shadow: 2px 2px 0 var(--bg-color);
+}
+
+.mini-title {
+    font-size: var(--size-text);
+    font-family: var(--font-style-text);
+    line-height: var(--line-height-text);
+}
+
+.mini-title-image {
+    font-size: var(--size-text);
+    font-family: var(--font-style-text);
+    line-height: var(--line-height-text);
+    margin-block-end: var(--indent);
+}
+
+.content__image {
+    display: grid;
+    gap: var(--indent);
+    padding: 0 0 var(--padding-block) 0;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.footer {
+    padding: var(--indent);
+    height: 100vh;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer::after {
+    content: "";
+    inline-size: calc(var(--indent) * 2.5);
+    block-size: calc(var(--indent) * 2.5);
+    border-inline-end: 1px solid var(--bg-color);
+    border-block-start:1px solid var(--bg-color);
+    position: absolute;
+    inset-inline-end: var(--indent);
+    inset-block-start: var(--indent);
+}
+
+.footer::before {
+    content: "";
+    inline-size: calc(var(--indent) * 2.5);
+    block-size: calc(var(--indent) * 2.5);
+    border-inline-start: 1px solid var(--bg-color);
+    border-block-end: 1px solid var(--bg-color);
+    position: absolute;
+    inset-inline-start: var(--indent);
+    inset-block-end: var(--indent); 
+}
+
+.footer__title {
+    color: var(--color-title);
+    font-family: var(--font-style-text);
+    font-weight: bold;
+    font-size: var(--font-size-title);
+    text-shadow: 2px 2px 0 var(--bg-color); /*--accent-color хотят чтобы я поставил*/
+    line-height: var(--line-height-title);
+}
+
+
+@media (width >= 768px) {
+    :root {
+        --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+        --indent: 20px;
+    }
+
+        .header__paragraf {
+        width: calc(100% / 2);
+    }
+
+    .header {
+        padding: calc(var(--indent) * 2);
+    }
+    
+    .decorated-zone {
+        position: relative;
+        min-height: 1024px;
+        height: 100vh;
+    }
+    
+    .decorated-zone::after {
+        inset-inline-end: 20px;
+        inset-block-start: 20px;
+    }
+    
+    .decorated-zone::before {
+        inset-inline-start: 20px;
+        inset-block-end: 20px;
+    }
+    
+    .decorated_title::after {
+        inset-inline-end: 29px;
+        inset-block-start: 28px;
+    }
+    
+    .decorated_title::before {
+        content: "rec";
+        text-transform: uppercase;
+        color: var(--bg-color);
+        position: absolute;
+        inset-inline-end: 48px;
+        inset-block-start: 20px;
+    }
+    
+    .content {
+        --padding-block: 60px;
+        padding: var(--padding-block) 20px 20px 20px;
+        
+    }
+
+    .section__content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: calc(var(--indent) * 2);
+        padding: 0 0 calc(var(--padding-block) + 20px) 0;
+    }
+    
+    .content__answer {
+        grid-column: 2;
+    }
+    
+    .base .content__answer{
+        grid-column: span 2;
+    }
+    
+    .completion .section__content_questions-title {
+        grid-row: span 2;
+    }
+
+    .completion .mini-title {
+        grid-row: span 1;
+    }
+    
+    .content__image {
+        display: grid;
+        grid-auto-flow: dense;    /*Хз как сделать такую сетку*/
+        gap: var(--indent);
+        padding: 0 0 var(--padding-block) 0;
+        
+    }
+    
+    .footer {
+        padding: var(--indent);
+    }
+    
+    .footer::after {
+        inset-inline-end: 20px;
+        inset-block-start: 20px;
+    }
+    
+    .footer::before {
+        inset-inline-start: 20px;
+        inset-block-end: 20px; 
+    }
+}
+
+@media (width >= 1024px) {
+    .header {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: start;
+        min-height: 668px;
+        height: 100vh;
+    }
+
+    .header__theme-menu-list {
+        display: flex;
+    }
+    
+    .header__paragraf {
+        justify-self: end;
+    }
+
+
+}
