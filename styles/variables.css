@@ -16,5 +16,14 @@
   --color-text-main: rgba(241, 178, 206, 1);
   --padding-block: 40px;
   --indent: 10px;
+  --visibility: visible;
+}
+
+@media (width >= 768px) {
+  :root {
+    --padding-block: 60px;
+    --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --indent: 20px;
+  }
 }
 
